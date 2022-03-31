@@ -1,0 +1,80 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    z-index: 100;
+    padding: 1%;
+}
+
+.navbar_container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5%;
+}
+
+.navbar_half_1{
+    width: 75%;
+    font-size: 22px;
+    color: white;
+    padding-left: 20px;
+}
+
+.navbar_half_2{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+}
+
+.link{
+    text-decoration: none;
+    color: #01242f;
+}
+
+.navbar_card{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_card_container{
+    width: calc(100vw - 50vw);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    height: calc(100vh - 70vh);
+    margin-top: 15%;
+    border-radius: 10px 60px ;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.login_bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.login_bar_card{
+    width: 50%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 10px 60px;
+    color: white;
+}

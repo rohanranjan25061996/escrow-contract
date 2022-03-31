@@ -1,0 +1,143 @@
+.sign_out{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    z-index: 200;
+    cursor: pointer;
+    top: 3%;
+    color: white;
+}
+
+.main{
+    margin-top: 5%;
+    width: 100%;
+    color: white;
+}
+
+.loading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    color: black;
+}
+
+.all_ownerlist_main, .all_tx_main{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.all_ownerlist_conatiner, .all_tx_container{
+    width: 95%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    border-radius: 10px 30px;
+    color: white;
+}
+
+.all_ownerlist_conatiner_2, .all_tx_conatiner_2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.all_ownerlist_data{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 22px;
+    margin-top: 1%;
+    color: white;
+}
+
+.add_owner{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.remove_owner, .submit, .cancel{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: linear-gradient(90deg, rgba(27,180,223,1) 0%, rgba(0,8,81,1) 100%);
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px;
+    color: white;
+}
+
+.new_owner_form{
+    margin-top: 2%;
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    color: white;
+}
+
+.new_owner_form input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    width: 60%;
+    color: white;
+}
+
+.new_owner_form_tx{
+    margin-top: 2%;
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    color: white;
+}
+
+.new_owner_form_tx input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    width: 18%;
+}
+
+.table{
+    width: 100%;
+}
+
+.table,th{
+    border: 1px solid black;
+}
+
+.table, th, td {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
