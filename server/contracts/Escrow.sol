@@ -71,7 +71,7 @@ contract Escorw {
 
     function initiateContract(uint _id) checkValidId(_id) public {
         Data storage d = data[_id];
-        require(msg.sender == d.seller || msg.sender == d.buyer, "invalid address");
+        require(msg.sender == d.seller || msg.sender == d.buyer, "only buyer or seller can initiate");
 
         if(msg.sender == d.seller){
             d.isSeller = true;
@@ -88,6 +88,7 @@ contract Escorw {
 
     function coniformPayment(uint _id) checkValidId(_id) checkDeposit(_id) onlyForBuyer(_id) public {
         Data storage d = data[_id];
+        require(address(this).balance >= d.price, "insufficent fund");
         d.seller.transfer(d.price);
         d.flag = 3;
     }
@@ -113,16 +114,19 @@ contract Escorw {
             d.flag = 0;
         }
 
-        if(msg.sender == d.seller){
+        if(msg.sender == d.seller && d.flag == 2){
+            address b = d.buyer;
+            address payable pay_b = payable(b);
+            pay_b.transfer(d.price);
             d.isBuyer = false;
             d.isSeller = false;
             d.flag = 0;
         }
 
-        if( (msg.sender == d.seller || msg.sender == d.buyer) && d.flag == 1 ){
-                d.isBuyer = false;
-                d.isSeller = false;
-                d.flag = 0;
+        if(d.flag == 1 ){
+            d.isBuyer = false;
+            d.isSeller = false;
+            d.flag = 0;
         }
     }
 }

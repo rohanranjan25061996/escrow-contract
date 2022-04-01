@@ -1,6 +1,6 @@
 const main = async () => {
 
-    // contract address 0x3bF2319013980753B93994CdA26dAe195A473330
+    // contract address 0xF92D221205390B4BcEf6D30E96f1BFD7D6E6D936
     const Escorw = await ethers.getContractFactory("Escorw");
     const wallet = await Escorw.deploy();
 

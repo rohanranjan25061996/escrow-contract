@@ -141,11 +141,19 @@ const Wallet = () => {
             let payLoad = {
                 _id: id
             }
-            const option = getMoralisOption('deposit', payLoad)
-            const tx = await Moralis.executeFunction({...option, msgValue: data[id].price});
-            await tx.wait();
-            await getAllData()
-            setLoading(false)
+            let currentBalance = await getUserBalance(userAddress);
+            currentBalance = +currentBalance * (Math.pow(10, 18));
+            const depositAmount = +data[id].price;
+            if(currentBalance >= depositAmount){
+                const option = getMoralisOption('deposit', payLoad)
+                const tx = await Moralis.executeFunction({...option, msgValue: data[id].price});
+                await tx.wait();
+                await getAllData()
+                setLoading(false)
+            }else{
+                setLoading(false)
+                alert(`Insufficient fund ${userAddress} account`);
+            }
         }catch(error){
             setLoading(false)
             let ok = JSON.stringify(error)
@@ -181,7 +189,7 @@ const Wallet = () => {
 
     const cancelTxx = async (id) => {
         try{
-            setLoading(false);
+            setLoading(true);
             let payLoad = {
                 _id: id
             }
