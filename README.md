@@ -2,7 +2,7 @@
 
 https://escrow-contract.netlify.app
 
-Smart Contract Address : 0xF92D221205390B4BcEf6D30E96f1BFD7D6E6D936
+Smart Contract Address : 0xF92D221205390B4BcEf6D30E96f1BFD7D6E6D936 (on testnet n/w rinkeby)
 
 An escrow agreement is a contract that outlines the terms and conditions between parties involved, and the responsibility of each. Escrow agreements generally involve an independent third party, called an escrow agent, who holds an asset of value until the specified conditions of the contract are met.
 
@@ -13,11 +13,12 @@ Note: If deal will coniform by buyer then buyer or seller have no option to canc
 # Technologies
 
 ### Frontend
-. React Js
+1. React Js
 
 ### Backend
-. Solidity (Smart Contract v:0.8.4)
-. Hardhat
+1. Solidity (Smart Contract v:0.8.4)
+2. Hardhat
+3. Infura
 
 open for the suggestions..
 
